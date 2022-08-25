@@ -1,0 +1,62 @@
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 600px;
+    }
+}
+
+/*pc*/
+@media (min-width: 1025px) {
+
+}
+
+/*laptop*/
+@media (max-width: 1024px) {
+    .banner {
+        padding: 180px 40px;
+    }
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .index{
+        font-size: 35px;
+    }
+    .banner {
+        padding: 80px 40px;
+    }
+    .banner-title {
+        font-size: 35px;
+    }
+    .contact-list {
+        flex-direction: column;
+    }
+    .contact-list a {
+        font-size: 14px;
+        justify-content: center;
+    }
+    .section-report {
+        padding: 80px 20px;
+    }
+}
+
+/*mobile*/
+@media(max-width: 575px){
+    .form-search{
+        width: 100%;
+    }
+    .banner {
+        padding: 80px 20px;
+    }
+    .title-result span{
+        font-size: 25px;
+    }
+    .img-report img{
+        max-width: 250px;
+    }
+    .section-report{
+        padding: 50px 15px;
+    }
+    .form-register .form-control{
+        width: 100%;
+    }
+}
