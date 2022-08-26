@@ -497,6 +497,8 @@ a.dropdown-toggle.tab-user::after {
     width: 250px;
     display: block;
     overflow: hidden;
+    color: #000;
+    text-decoration: none;
 }
 .menu-box a i {
     margin-right: 8px;
@@ -636,7 +638,7 @@ button.navbar-toggler.dropdown-toggle[aria-expanded=false] i.fa-solid.fa-xmark {
     padding:  4px 8px;
     font-size: 12px;
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
 }
 
@@ -753,7 +755,7 @@ a {
 }
 .section-count{
     background: #5F5DD2;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
 }
 .count-customer {
     font-size: 2.5rem;
@@ -769,4 +771,16 @@ a {
     border-radius: 50%;
     width: 50px;
     height: 50px;
+}
+.history-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.history-title img{
+    width: 80px;
+}
+.tbl-history {
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }

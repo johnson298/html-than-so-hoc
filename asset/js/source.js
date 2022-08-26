@@ -1,7 +1,7 @@
 
 // slide giải mã, đỉnh cao cuộc đời, dự báo thời vận
-const $slideGiaiMa = $(".slider-mobile-only");
-$slideGiaiMa.slick({
+const $sliderMobileOnly = $(".slider-mobile-only");
+$sliderMobileOnly.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     mobileFirst: true,
@@ -11,21 +11,18 @@ $slideGiaiMa.slick({
             breakpoint: 768,
             settings: 'unslick'
         }
-    ],
-    focusOnChange() {
-        console.log('llll')
-    }
+    ]
 })
     .init(function() {
-        var currentSlide = $slideGiaiMa.slick('getSlick').getCurrent()
-        var slideCount = $slideGiaiMa.slick("getSlick").getDotCount()
-        $slideGiaiMa.append('<div class="slick-counter">'+ parseInt(currentSlide + 1, 10) +' / '+ slideCount +'</div>')
+        var currentSlide = $sliderMobileOnly.slick('getSlick').getCurrent()
+        var slideCount = $sliderMobileOnly.slick("getSlick").getDotCount()
+        $sliderMobileOnly.append('<div class="slick-counter">'+ parseInt(currentSlide + 1, 10) +' / '+ slideCount +'</div>')
     })
 
-$slideGiaiMa.on("afterChange", function(){
-    var currentSlide = $slideGiaiMa.slick('getSlick').getCurrent()
-    var slideCount = $slideGiaiMa.slick("getSlick").getDotCount()
-    $slideGiaiMa.find('.slick-counter').html(currentSlide + 1 +' / '+ slideCount);
+$sliderMobileOnly.on("afterChange", function(){
+    var currentSlide = $sliderMobileOnly.slick('getSlick').getCurrent()
+    var slideCount = $sliderMobileOnly.slick("getSlick").getDotCount()
+    $sliderMobileOnly.find('.slick-counter').html(currentSlide + 1 +' / '+ slideCount);
 });
 
 
