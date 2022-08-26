@@ -9,11 +9,19 @@
     <link rel="stylesheet" href="asset/bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="asset/css/responsive.css">
+    <link rel="stylesheet" href="asset/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="asset/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="asset/fontawesome-6.1.2/css/all.min.css">
 
 
     <script src="asset/js/jquery-3.6.0.min.js"></script>
     <script src="asset/bootstrap-5.2.0/js/bootstrap.min.js"></script>
     <script src="asset/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="asset/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="asset/js/source.js"></script>
+
 
 </head>
 <body>
@@ -21,10 +29,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler">
+                <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -35,7 +41,7 @@
                         <a class="nav-link" href="#">sản phẩm</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">bảng giá</a>
+                        <a class="nav-link" href="./bang-gia.html">bảng giá</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">blog</a>
@@ -44,10 +50,53 @@
                         <a class="nav-link" href="#">liên hệ</a>
                     </li>
                 </ul>
-                <div class="d-flex">
+                <div class="d-flex align-items-center box-profile">
                     <button class="btn btn-auth" type="submit" data-bs-toggle="modal" data-bs-target="#modalLogin">Đăng
                         nhập
                     </button>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle tab-user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="img">
+                                <img src="./asset/images/icon/star.svg" alt="">
+                            </span>
+                            <div>
+                                <span class="phone">09837838348</span>
+                                <div class="count"><strong>12</strong> lượt tra cứu</div>
+                            </div>
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <div class="profile-head">
+                                <div class="head">Thông tin cá nhân</div>
+                                <div class="menu-box">
+                                   <a><i class="fa-solid fa-envelope"></i> tpquynhngan@gmail.com</a>
+                                   <a><i class="fa-solid fa-database"></i> Số lượt tra cứu: <strong class="text-primary">0 lượt</strong></a>
+                                   <a><i class="fa-solid fa-clock-rotate-left"></i> Xem lịch sử tra cứu</a>
+                                   <a><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-mobile">
+            <div class="head">Thông tin cá nhân</div>
+            <div class="menu-box">
+                <a><i class="fa-solid fa-envelope"></i> tpquynhngan@gmail.com</a>
+                <a><i class="fa-solid fa-database"></i> Số lượt tra cứu: <strong class="text-primary">0 lượt</strong></a>
+                <a><i class="fa-solid fa-clock-rotate-left"></i> Xem lịch sử tra cứu</a>
+                <a><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất</a>
+            </div>
+            <div class="menu-mobile">
+                <a class="menu-mobile-item" href=""><img src="./asset/images/icon/product.svg" alt=""> Sản phẩm</a>
+                <a class="menu-mobile-item" href=""><img src="./asset/images/icon/price.svg" alt=""> Bảng giá</a>
+                <a class="menu-mobile-item" href=""><img src="./asset/images/icon/blog.svg" alt=""> Blog</a>
+                <a class="menu-mobile-item" href=""><img src="./asset/images/icon/mail-mobile.svg" alt=""> Liên hệ</a>
+                <div class="lst-social">
+                    <div class="mb-1">Facebook: <a href="">thansohoc/facebook</a></div>
+                    <div class="mb-1">Gmail: xemthansovn@gmail.com</div>
+                    <div>Hotline: 096.2345.346</div>
                 </div>
             </div>
         </div>
@@ -571,13 +620,97 @@
 </div>
 
 <div class="section-feedback">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="title font2 text-center mb-4">Feedback từ người dùng </h2>
+    <h2 class="title font2 text-center mb-4">Feedback từ người dùng </h2>
+    <div class="g-4" id="slide-feedback">
+        <div class="feedback-wrap">
+            <div class="feedback-item">
+                <div class="ct">
+                    <div class="summary">Đã tìm ra được hướng đi cho bản thân!</div>
+                    <div class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    <div class="name">Tống Phước Quỳnh Ngân</div>
+                    <div class="time">22/10/2022</div>
+                </div>
+                <div class="img">
+                    <img src="./asset/images/customer.png" alt="">
+                </div>
             </div>
-            <div class="col-12">
-               ...
+        </div>
+        <div class="feedback-wrap">
+            <div class="feedback-item">
+                <div class="ct">
+                    <div class="summary">Đã tìm ra được hướng đi cho bản thân!</div>
+                    <div class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    <div class="name">Tống Phước Quỳnh Ngân</div>
+                    <div class="time">22/10/2022</div>
+                </div>
+                <div class="img">
+                    <img src="./asset/images/customer.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="feedback-wrap">
+            <div class="feedback-item">
+                <div class="ct">
+                    <div class="summary">Đã tìm ra được hướng đi cho bản thân!</div>
+                    <div class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    <div class="name">Tống Phước Quỳnh Ngân</div>
+                    <div class="time">22/10/2022</div>
+                </div>
+                <div class="img">
+                    <img src="./asset/images/customer.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="feedback-wrap">
+            <div class="feedback-item">
+                <div class="ct">
+                    <div class="summary">Đã tìm ra được hướng đi cho bản thân!</div>
+                    <div class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    <div class="name">Tống Phước Quỳnh Ngân</div>
+                    <div class="time">22/10/2022</div>
+                </div>
+                <div class="img">
+                    <img src="./asset/images/customer.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="feedback-wrap">
+            <div class="feedback-item">
+                <div class="ct">
+                    <div class="summary">Đã tìm ra được hướng đi cho bản thân!</div>
+                    <div class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    <div class="name">Tống Phước Quỳnh Ngân</div>
+                    <div class="time">22/10/2022</div>
+                </div>
+                <div class="img">
+                    <img src="./asset/images/customer.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="feedback-wrap">
+            <div class="feedback-item">
+                <div class="ct">
+                    <div class="summary">Đã tìm ra được hướng đi cho bản thân!</div>
+                    <div class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    <div class="name">Tống Phước Quỳnh Ngân</div>
+                    <div class="time">22/10/2022</div>
+                </div>
+                <div class="img">
+                    <img src="./asset/images/customer.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="feedback-wrap">
+            <div class="feedback-item">
+                <div class="ct">
+                    <div class="summary">Đã tìm ra được hướng đi cho bản thân!</div>
+                    <div class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    <div class="name">Tống Phước Quỳnh Ngân</div>
+                    <div class="time">22/10/2022</div>
+                </div>
+                <div class="img">
+                    <img src="./asset/images/customer.png" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -671,5 +804,35 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    $('#slide-feedback').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+</script>
 </body>
 </html>
