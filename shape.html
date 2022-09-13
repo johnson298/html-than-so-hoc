@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./asset/js/svg.min.js"></script>
+</head>
+<body>
+<div id="svg_shape" style="width: fit-content; margin: auto;"></div>
+<script src="./asset/js/Point.js"></script>
+<script src="./asset/js/Shape.js"></script>
+<script>
+    // w = 350, h = 425 (h = 1.2*w)
+    const shape = new Shape('#svg_shape', 400, 400*1.2);
+    shape.drawShape({
+        p1: {text: 1, color: '#6672F2'},
+        p2: {text: 2, color: '#8E97FB'},
+        p3: {text: 3, color: '#6672F2'},
+        p4: {text: 4, color: '#8E97FB'},
+        p5: {text: 5, color: '#6672F2'},
+        p6: {text: 6, color: '#8E97FB'},
+        p7: {text: 7, color: '#8E97FB'},
+        p8: {text: 8, color: '#8E97FB'},
+        p9: {text: 9, color: '#8E97FB'},
+        p10: {text: 10, color: '#8E97FB'},
+        p11: {text: 11, color: '#8E97FB' }
+    });
+</script>
+<style>
+    @media (max-width: 556px) {
+        #svg_shape {
+            transform: scale(.85);
+        }
+    }
+</style>
+</body>
+</html>

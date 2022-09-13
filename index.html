@@ -288,7 +288,7 @@
                 <div class="row mt-4">
                     <div class="col-12 col-md-6">
                         <div class="d-flex justify-content-center">
-                            <img src="./asset/images/canvas.png" alt="" class="img-fluid">
+                            <div id="svg_shape" style="width: fit-content; margin: auto;"></div>
                         </div>
                         <div class="note-image text-center mt-3">Kim tự tháp thần số học của bạn</div>
                     </div>
@@ -948,6 +948,26 @@
     </div>
 </div>
 
+<script src="./asset/js/svg.min.js"></script>
 <script src="asset/js/source.js"></script>
+<script src="./asset/js/Point.js"></script>
+<script src="./asset/js/Shape.js"></script>
+<script>
+    // w = 350, h = 425 (h = 1.2*w)
+    const shape = new Shape('#svg_shape', 400, 400*1.2);
+    shape.drawShape({
+        p1: {text: 1, color: '#6672F2'},
+        p2: {text: 2, color: '#8E97FB'},
+        p3: {text: 3, color: '#6672F2'},
+        p4: {text: 4, color: '#8E97FB'},
+        p5: {text: 5, color: '#6672F2'},
+        p6: {text: 6, color: '#8E97FB'},
+        p7: {text: 7, color: '#8E97FB'},
+        p8: {text: 8, color: '#8E97FB'},
+        p9: {text: 9, color: '#8E97FB'},
+        p10: {text: 10, color: '#8E97FB'},
+        p11: {text: 11, color: '#8E97FB' }
+    });
+</script>
 </body>
 </html>
