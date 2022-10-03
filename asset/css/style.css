@@ -230,13 +230,44 @@ header .navbar{
     background: #000000;
 }
 .search-index table td {
-    border: 1px solid #000000;
-    padding: 8px;
+    border: 1px solid #828282;
+    padding: 8px 25px;
 }
 .search-index table{
     width: 100%;
     border: 1px solid #000000;
     border-collapse: collapse;
+    position: relative;
+}
+.search-index table tbody > tr:first-child {
+    position: relative;
+}
+.search-index table:before, .search-index table:first-child:after {
+    position: absolute;
+    content: '';
+    background: url("../images/icon/rhombus.svg") no-repeat center;
+    background-size: cover;
+    width: 24px;
+    height: 34px;
+    top: 43px;
+}
+.search-index table:first-child:before {
+    left: -12px;
+    transform: translateY(-50%);
+}
+.search-index table:first-child:after {
+    right: -12px;
+    transform: translateY(-50%);
+}
+.search-index table tr > td:last-child {
+    border-right: none;
+}
+.search-index table tbody > tr:first-child td {
+    border-top: 0;
+    height: 88px;
+}
+.search-index table tbody > tr:last-child td {
+    border-bottom: 0;
 }
 .index{
     font-weight: 400;

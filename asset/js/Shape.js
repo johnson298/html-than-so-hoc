@@ -11,7 +11,8 @@ const Shape = function(_element, _width, _height) {
     this.font = {
         size: 13,
         family: 'segoe UI',
-        weight: 'bold'
+        weight: 'bold',
+        fill: '#fff'
     };
     this.wPoint = 38;
     this.hPoint = 38;
