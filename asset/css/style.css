@@ -596,8 +596,12 @@ button.navbar-toggler.dropdown-toggle[aria-expanded=false] i.fa-solid.fa-xmark {
     text-decoration: underline;
 }
 .slider-mobile-only .slick-prev, .slider-mobile-only  .slick-next {
-    bottom: -30px;
+    bottom: -55px;
     top: auto;
+    width: 42px;
+    height: 42px;
+    background: rgba(102, 114, 242, 0.2);
+    border-radius: 50%;
 }
 
 .slider-mobile-only .slick-prev {
@@ -802,6 +806,9 @@ a {
     border-radius: 50%;
     width: 50px;
     height: 50px;
+}
+.slider-mobile-only .slick-prev:before, .slider-mobile-only .slick-next:before {
+    display: none;
 }
 .history-title {
     display: flex;
