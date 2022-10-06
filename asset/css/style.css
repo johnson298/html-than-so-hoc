@@ -810,6 +810,11 @@ a {
 .slider-mobile-only .slick-prev:before, .slider-mobile-only .slick-next:before {
     display: none;
 }
+.slick-arrow:focus {
+    outline: none;
+    box-shadow: none;
+    background: rgba(102, 114, 242, 0.2) !important;
+}
 .history-title {
     display: flex;
     align-items: center;

@@ -18,13 +18,13 @@ $sliderMobileOnly.slick({
     .init(function() {
         var currentSlide = $sliderMobileOnly.slick('getSlick').getCurrent()
         var slideCount = $sliderMobileOnly.slick("getSlick").getDotCount()
-        $sliderMobileOnly.append('<div class="slick-counter">'+ parseInt(currentSlide + 1, 10) +' / '+ slideCount +'</div>')
+        $sliderMobileOnly.append('<div class="slick-counter">'+ parseInt(currentSlide + 1, 10) +' / '+ (Number(slideCount) + 1) +'</div>')
     })
 
 $sliderMobileOnly.on("afterChange", function(){
     var currentSlide = $sliderMobileOnly.slick('getSlick').getCurrent()
     var slideCount = $sliderMobileOnly.slick("getSlick").getDotCount()
-    $sliderMobileOnly.find('.slick-counter').html(currentSlide + 1 +' / '+ slideCount);
+    $sliderMobileOnly.find('.slick-counter').html(currentSlide + 1 +' / '+ (Number(slideCount) + 1));
 });
 
 
